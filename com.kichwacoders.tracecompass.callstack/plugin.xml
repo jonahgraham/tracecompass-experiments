@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.linuxtools.tmf.core.analysis">
+      <module
+            analysis_module="com.kichwacoders.tracecompass.callstack.CallStackAnalysisModule"
+            automatic="false"
+            id="com.kichwacoders.tracecompass.callstack.module1"
+            name="Call Stack Analysis">
+         <tracetype
+               applies="true"
+               class="org.eclipse.tracecompass.tmf.core.parsers.custom.CustomTxtTrace">
+         </tracetype>
+      </module>
+   </extension>
+
+</plugin>
