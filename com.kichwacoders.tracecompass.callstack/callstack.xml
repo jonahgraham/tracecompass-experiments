@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CustomTxtTraceDefinitionList>
+<Definition category="Custom Text" name="callstack">
+<TimeStampOutputFormat>Tu</TimeStampOutputFormat>
+<InputLine>
+<Cardinality max="2147483647" min="0"/>
+<RegEx>(\S+) enter (\S+)</RegEx>
+<EventType>enter</EventType>
+<InputData action="0" format="Tu" name="Timestamp" tag="TIMESTAMP"/>
+<InputData action="0" format="" name="Message" tag="MESSAGE"/>
+</InputLine>
+<InputLine>
+<Cardinality max="2147483647" min="0"/>
+<RegEx>(\S+) exit (\S+)</RegEx>
+<EventType>exit</EventType>
+<InputData action="0" format="Tu" name="Timestamp" tag="TIMESTAMP"/>
+<InputData action="0" format="" name="Message" tag="MESSAGE"/>
+</InputLine>
+<OutputColumn name="Timestamp" tag="TIMESTAMP"/>
+<OutputColumn name="Message" tag="MESSAGE"/>
+</Definition>
+</CustomTxtTraceDefinitionList>

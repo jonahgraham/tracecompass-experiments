@@ -1,0 +1,12 @@
+1 enter premain
+2 enter main
+3 enter print
+4 exit print
+5 enter method
+6 enter print
+7 exit print
+8 enter print
+9 exit print
+10 exit method
+11 exit main
+12 exit premain
