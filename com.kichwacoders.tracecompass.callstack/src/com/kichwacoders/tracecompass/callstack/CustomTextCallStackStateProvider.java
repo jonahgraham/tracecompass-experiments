@@ -57,12 +57,12 @@ public class CustomTextCallStackStateProvider extends CallStackStateProvider {
 
 	@Override
 	protected int getProcessId(ITmfEvent event) {
-        return UNKNOWN_PID;
+		return UNKNOWN_PID;
 	}
 
 	@Override
 	protected long getThreadId(ITmfEvent event) {
-        return 1;
+		return 1;
 	}
 
 }
