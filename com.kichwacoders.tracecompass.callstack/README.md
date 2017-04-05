@@ -16,4 +16,3 @@ To try it out
 4. Open the call stack views:
 
 ![screenshot of call stack analysis](analysis.png)
-   
