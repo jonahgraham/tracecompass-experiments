@@ -35,7 +35,7 @@ public class CallStackAnalysisModule extends CallStackAnalysis {
 
 	@Override
 	protected ITmfStateProvider createStateProvider() {
-		return new MyCallStackStateProvider(getTrace());
+		return new CustomTextCallStackStateProvider(getTrace());
 	}
 
 	@Override

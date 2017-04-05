@@ -10,11 +10,11 @@ import org.eclipse.tracecompass.tmf.core.event.ITmfEventField;
 import org.eclipse.tracecompass.tmf.core.trace.ITmfTrace;
 
 @NonNullByDefault
-public class MyCallStackStateProvider extends CallStackStateProvider {
+public class CustomTextCallStackStateProvider extends CallStackStateProvider {
 
 	private static final int VERSION = 1;
 
-	public MyCallStackStateProvider(ITmfTrace trace) {
+	public CustomTextCallStackStateProvider(ITmfTrace trace) {
 		super(trace);
 	}
 
@@ -25,18 +25,17 @@ public class MyCallStackStateProvider extends CallStackStateProvider {
 
 	@Override
 	public CallStackStateProvider getNewInstance() {
-		return new MyCallStackStateProvider(getTrace());
+		return new CustomTextCallStackStateProvider(getTrace());
 	}
 
 	@Override
 	protected boolean considerEvent(ITmfEvent event) {
-		System.out.println("considerEvent:" + event);
 		return true;
 	}
 
 	@Override
 	protected @Nullable ITmfStateValue functionEntry(ITmfEvent event) {
-		if ("enter".equals(event.getType().getName())) {
+		if ("enter".equals(event.getName())) {
 			ITmfEventField func = event.getContent();
 			ITmfEventField field = func.getField("Message");
 			Object value = field.getValue();
@@ -49,7 +48,7 @@ public class MyCallStackStateProvider extends CallStackStateProvider {
 
 	@Override
 	protected @Nullable ITmfStateValue functionExit(ITmfEvent event) {
-		if ("exit".equals(event.getType().getName())) {
+		if ("exit".equals(event.getName())) {
 			ITmfEventField func = event.getContent();
 			ITmfEventField field = func.getField("Message");
 			Object value = field.getValue();
