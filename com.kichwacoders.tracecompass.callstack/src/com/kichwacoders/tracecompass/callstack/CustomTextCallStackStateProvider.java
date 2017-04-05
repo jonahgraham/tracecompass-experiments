@@ -39,8 +39,6 @@ public class CustomTextCallStackStateProvider extends CallStackStateProvider {
 			ITmfEventField func = event.getContent();
 			ITmfEventField field = func.getField("Message");
 			Object value = field.getValue();
-			field.toString();
-			func.toString();
 			return TmfStateValue.newValueString(value.toString());
 		}
 		return null;
@@ -52,8 +50,6 @@ public class CustomTextCallStackStateProvider extends CallStackStateProvider {
 			ITmfEventField func = event.getContent();
 			ITmfEventField field = func.getField("Message");
 			Object value = field.getValue();
-			field.toString();
-			func.toString();
 			return TmfStateValue.newValueString(value.toString());
 		}
 		return null;
